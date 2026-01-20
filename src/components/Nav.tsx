@@ -1,4 +1,10 @@
-const navItems = ['Produkt', 'Ressurser', 'Priser']
+import { Link } from "@tanstack/react-router";
+
+const navItems = [
+  { label: "Produkt", to: "/" },
+  { label: "Ressurser", to: "/features" },
+  { label: "Priser" },
+];
 
 function Nav() {
   return (
@@ -7,18 +13,27 @@ function Nav() {
         BoziPhone
       </span>
       <div className="flex flex-col items-end gap-2 sm:flex-row sm:items-center sm:gap-6">
-        {navItems.map((item) => (
-          <a
-            key={item}
-            className="text-sm font-medium text-[color:var(--color-ink-soft)]"
-            href="#"
-          >
-            {item}
-          </a>
-        ))}
+        {navItems.map((item) =>
+          item.to ? (
+            <Link
+              key={item.label}
+              className="text-sm font-medium text-[color:var(--color-ink-soft)]"
+              to={item.to}
+            >
+              {item.label}
+            </Link>
+          ) : (
+            <span
+              key={item.label}
+              className="text-sm font-medium text-[color:var(--color-ink-soft)]"
+            >
+              {item.label}
+            </span>
+          ),
+        )}
       </div>
     </nav>
-  )
+  );
 }
 
-export default Nav
+export default Nav;

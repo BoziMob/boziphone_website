@@ -1,4 +1,10 @@
-const footerLinks = ['Features', 'Lær mer', 'Support']
+import { Link } from "@tanstack/react-router";
+
+const footerLinks = [
+  { label: "Features", to: "/features" },
+  { label: "Lær mer" },
+  { label: "Support" },
+];
 
 function Footer() {
   return (
@@ -8,11 +14,17 @@ function Footer() {
           Boziphone
         </span>
         <div className="flex items-center gap-4">
-          {footerLinks.map((link) => (
-            <a key={link} className="font-medium" href="#">
-              {link}
-            </a>
-          ))}
+          {footerLinks.map((link) =>
+            link.to ? (
+              <Link key={link.label} className="font-medium" to={link.to}>
+                {link.label}
+              </Link>
+            ) : (
+              <span key={link.label} className="font-medium">
+                {link.label}
+              </span>
+            ),
+          )}
         </div>
       </div>
       <div className="flex items-center gap-3">
@@ -20,7 +32,7 @@ function Footer() {
         <span className="h-5 w-5 rounded-full border border-[color:var(--color-border)]" />
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
