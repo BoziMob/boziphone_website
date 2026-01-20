@@ -1,58 +1,38 @@
+import FeatureList from "./components/FeatureList";
+import Footer from "./components/Footer";
+import GradientCard from "./components/GradientCard";
+import Hero from "./components/Hero";
+import InfoSection from "./components/InfoSection";
+import Nav from "./components/Nav";
+
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <div className="mx-auto flex max-w-5xl flex-col gap-10 px-6 py-16 sm:py-24">
-        <header className="flex flex-col gap-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-400">
-            Boziphone
-          </p>
-          <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
-            Boziphone - for en enklere hverdag
-          </h1>
-          <p className="max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
-            You are running React + TypeScript + Tailwind. Start editing{" "}
-            <code className="rounded bg-slate-800 px-2 py-1 text-sm text-slate-100">
-              src/App.tsx
-            </code>{" "}
-            to shape the layout.
-          </p>
-        </header>
-
-        <section className="grid gap-6 sm:grid-cols-3">
-          {[
-            {
-              title: "Fast by default",
-              detail: "Vite hot reload keeps the loop tight as you build.",
-            },
-            {
-              title: "Typed everywhere",
-              detail: "TypeScript is ready for components, props, and utils.",
-            },
-            {
-              title: "Style in seconds",
-              detail: "Tailwind utilities handle layout, color, and rhythm.",
-            },
-          ].map((item) => (
-            <div
-              key={item.title}
-              className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-lg shadow-black/30"
-            >
-              <h2 className="text-lg font-semibold text-slate-100">
-                {item.title}
-              </h2>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                {item.detail}
-              </p>
-            </div>
-          ))}
-        </section>
-
-        <footer className="flex flex-wrap items-center gap-4 text-sm text-slate-400">
-          <span className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900 px-4 py-2">
-            Ready to ship
-          </span>
-          <span>Update the content and deploy.</span>
-        </footer>
+    <div className="min-h-screen bg-white text-neutral-900">
+      <div className="sticky top-0 z-20 border-b border-neutral-200 bg-white/80 backdrop-blur-md">
+        <div className="mx-auto max-w-6xl px-6 py-4">
+          <Nav />
+        </div>
+      </div>
+      <div className="mx-auto flex max-w-6xl flex-col gap-14 px-6 py-10 sm:gap-16 sm:py-12">
+        <Hero />
+        <GradientCard />
+        <InfoSection
+          title="Reduser stress i hverdagen"
+          body="BoziPhone er en telefon designet for å redusere skjermbruk, ved å kun ha tjenestene du faktisk trenger. Se hvordan BoziPhone kan hjelpe deg."
+          buttonLabel="Lær mer"
+          imageClassName="bg-gradient-to-br from-pink-200 via-pink-100 to-white"
+          imageSizeClassName="h-44 sm:h-64"
+        />
+        <InfoSection
+          title="Open source teknologi"
+          body="Vi er for en mer åpen verden. Derfor er BoziPhone open source."
+          buttonLabel="Om open source"
+          imageClassName="bg-gradient-to-br from-purple-200 via-pink-300 to-purple-100"
+          imageSizeClassName="h-44 sm:h-64"
+          reverse
+        />
+        <FeatureList />
+        <Footer />
       </div>
     </div>
   );
