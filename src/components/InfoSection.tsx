@@ -26,8 +26,12 @@ function InfoSection({
       <div
         className={`flex flex-col gap-3 ${reverse ? "order-2 sm:col-start-2" : "order-1"}`}
       >
-        <h2 className="text-lg font-semibold text-neutral-900">{title}</h2>
-        <p className="text-base leading-relaxed text-neutral-600">{body}</p>
+        <h2 className="text-lg font-semibold text-[color:var(--color-ink)]">
+          {title}
+        </h2>
+        <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+          {body}
+        </p>
         <div>
           <Button>{buttonLabel}</Button>
         </div>

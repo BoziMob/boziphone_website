@@ -17,15 +17,19 @@ const features = [
 
 function FeatureList() {
   return (
-    <section className="grid gap-6 border-t border-neutral-200 pt-8 text-sm text-neutral-600 sm:grid-cols-3">
-      {features.map((feature) => (
-        <div key={feature.title} className="flex flex-col gap-2">
-          <h3 className="text-sm font-semibold text-neutral-900">
-            {feature.title}
-          </h3>
-          <p className="leading-relaxed">{feature.description}</p>
+    <section className="relative left-1/2 right-1/2 w-screen -mx-[50vw] bg-[color:var(--color-surface-muted)] py-12">
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="grid gap-6 border-t border-[color:var(--color-border)] pt-8 text-sm text-[color:var(--color-muted)] sm:grid-cols-3">
+          {features.map((feature) => (
+            <div key={feature.title} className="flex flex-col gap-2">
+              <h3 className="text-sm font-semibold text-[color:var(--color-ink)]">
+                {feature.title}
+              </h3>
+              <p className="leading-relaxed">{feature.description}</p>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </section>
   );
 }
