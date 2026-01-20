@@ -24,7 +24,9 @@ function InfoSection({
       }`}
     >
       <div
-        className={`flex flex-col gap-3 ${reverse ? "order-2 sm:col-start-2" : "order-1"}`}
+        className={`flex flex-col gap-3 ${
+          reverse ? "order-2 sm:col-start-2" : "order-1"
+        }`}
       >
         <h2 className="text-lg font-semibold text-[color:var(--color-ink)]">
           {title}
