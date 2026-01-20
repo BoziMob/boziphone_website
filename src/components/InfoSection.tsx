@@ -4,6 +4,7 @@ type InfoSectionProps = {
   title: string;
   body: string;
   buttonLabel: string;
+  buttonTo?: string;
   imageClassName: string;
   imageSizeClassName?: string;
   reverse?: boolean;
@@ -13,6 +14,7 @@ function InfoSection({
   title,
   body,
   buttonLabel,
+  buttonTo,
   imageClassName,
   imageSizeClassName = "h-40 sm:h-56",
   reverse = false,
@@ -35,7 +37,7 @@ function InfoSection({
           {body}
         </p>
         <div>
-          <Button>{buttonLabel}</Button>
+          <Button to={buttonTo}>{buttonLabel}</Button>
         </div>
       </div>
       <div

@@ -10,8 +10,10 @@ function Hero() {
         For en enklere hverdag
       </p>
       <div className="flex w-full flex-col items-center gap-2 sm:w-auto sm:flex-row">
-        <Button className="w-full sm:w-auto">Lær mer</Button>
-        <Button className="w-full sm:w-auto" variant="secondary">
+        <Button className="w-full sm:w-auto" to="/learn">
+          Lær mer
+        </Button>
+        <Button className="w-full sm:w-auto" variant="secondary" to="/pricing">
           Se priser
         </Button>
       </div>

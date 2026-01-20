@@ -10,11 +10,41 @@
 
 import { Route as rootRouteImport } from './app/__root'
 import { Route as PageRouteImport } from './app/page'
+import { Route as SupportPageRouteImport } from './app/support/page'
+import { Route as ResourcesPageRouteImport } from './app/resources/page'
+import { Route as ProductPageRouteImport } from './app/product/page'
+import { Route as PricingPageRouteImport } from './app/pricing/page'
+import { Route as LearnPageRouteImport } from './app/learn/page'
 import { Route as FeaturesPageRouteImport } from './app/features/page'
 
 const PageRoute = PageRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SupportPageRoute = SupportPageRouteImport.update({
+  id: '/support/',
+  path: '/support/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesPageRoute = ResourcesPageRouteImport.update({
+  id: '/resources/',
+  path: '/resources/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductPageRoute = ProductPageRouteImport.update({
+  id: '/product/',
+  path: '/product/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingPageRoute = PricingPageRouteImport.update({
+  id: '/pricing/',
+  path: '/pricing/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearnPageRoute = LearnPageRouteImport.update({
+  id: '/learn/',
+  path: '/learn/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FeaturesPageRoute = FeaturesPageRouteImport.update({
@@ -26,27 +56,69 @@ const FeaturesPageRoute = FeaturesPageRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof PageRoute
   '/features/': typeof FeaturesPageRoute
+  '/learn/': typeof LearnPageRoute
+  '/pricing/': typeof PricingPageRoute
+  '/product/': typeof ProductPageRoute
+  '/resources/': typeof ResourcesPageRoute
+  '/support/': typeof SupportPageRoute
 }
 export interface FileRoutesByTo {
   '/': typeof PageRoute
   '/features': typeof FeaturesPageRoute
+  '/learn': typeof LearnPageRoute
+  '/pricing': typeof PricingPageRoute
+  '/product': typeof ProductPageRoute
+  '/resources': typeof ResourcesPageRoute
+  '/support': typeof SupportPageRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof PageRoute
   '/features/': typeof FeaturesPageRoute
+  '/learn/': typeof LearnPageRoute
+  '/pricing/': typeof PricingPageRoute
+  '/product/': typeof ProductPageRoute
+  '/resources/': typeof ResourcesPageRoute
+  '/support/': typeof SupportPageRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/features/'
+  fullPaths:
+    | '/'
+    | '/features/'
+    | '/learn/'
+    | '/pricing/'
+    | '/product/'
+    | '/resources/'
+    | '/support/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/features'
-  id: '__root__' | '/' | '/features/'
+  to:
+    | '/'
+    | '/features'
+    | '/learn'
+    | '/pricing'
+    | '/product'
+    | '/resources'
+    | '/support'
+  id:
+    | '__root__'
+    | '/'
+    | '/features/'
+    | '/learn/'
+    | '/pricing/'
+    | '/product/'
+    | '/resources/'
+    | '/support/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   PageRoute: typeof PageRoute
   FeaturesPageRoute: typeof FeaturesPageRoute
+  LearnPageRoute: typeof LearnPageRoute
+  PricingPageRoute: typeof PricingPageRoute
+  ProductPageRoute: typeof ProductPageRoute
+  ResourcesPageRoute: typeof ResourcesPageRoute
+  SupportPageRoute: typeof SupportPageRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -56,6 +128,41 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof PageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/support/': {
+      id: '/support/'
+      path: '/support'
+      fullPath: '/support/'
+      preLoaderRoute: typeof SupportPageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/': {
+      id: '/resources/'
+      path: '/resources'
+      fullPath: '/resources/'
+      preLoaderRoute: typeof ResourcesPageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product/': {
+      id: '/product/'
+      path: '/product'
+      fullPath: '/product/'
+      preLoaderRoute: typeof ProductPageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing/': {
+      id: '/pricing/'
+      path: '/pricing'
+      fullPath: '/pricing/'
+      preLoaderRoute: typeof PricingPageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learn/': {
+      id: '/learn/'
+      path: '/learn'
+      fullPath: '/learn/'
+      preLoaderRoute: typeof LearnPageRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/features/': {
@@ -71,6 +178,11 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   PageRoute: PageRoute,
   FeaturesPageRoute: FeaturesPageRoute,
+  LearnPageRoute: LearnPageRoute,
+  PricingPageRoute: PricingPageRoute,
+  ProductPageRoute: ProductPageRoute,
+  ResourcesPageRoute: ResourcesPageRoute,
+  SupportPageRoute: SupportPageRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
