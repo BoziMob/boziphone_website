@@ -1,9 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import heroImage from "../assets/BOZIAURA.png";
 import FeatureList from "../components/FeatureList";
 import Hero from "../components/Hero";
 import InfoSection from "../components/InfoSection";
 import Reveal from "../components/Reveal";
+import TextLink from "../components/TextLink.tsx";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -54,9 +55,7 @@ function HomePage() {
             hverdagen, og ingenting mer. BoziPhone er moderne i uttrykket, enkel
             i bruk og laget for norsk hverdag.
           </p>
-          <Link className="text-base font-semibold" to="/features">
-            Se alle funksjoner
-          </Link>
+          <TextLink to="/features">Se alle funksjoner</TextLink>
         </section>
       </Reveal>
       <Reveal delayMs={240}>
