@@ -6,7 +6,7 @@ export const Route = createFileRoute("/support/")({
 
 function SupportPage() {
   return (
-    <section className="flex flex-col gap-10">
+    <section className="mx-auto flex w-full max-w-3xl flex-col gap-10">
       <div className="flex flex-col gap-3">
         <h1 className="text-3xl font-semibold">Support</h1>
         <p className="text-base text-[color:var(--color-muted)]">
