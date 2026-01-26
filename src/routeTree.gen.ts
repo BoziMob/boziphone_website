@@ -16,6 +16,7 @@ import { Route as ProductPageRouteImport } from './app/product/page'
 import { Route as PricingPageRouteImport } from './app/pricing/page'
 import { Route as LearnPageRouteImport } from './app/learn/page'
 import { Route as FeaturesPageRouteImport } from './app/features/page'
+import { Route as AboutPageRouteImport } from './app/about/page'
 
 const PageRoute = PageRouteImport.update({
   id: '/',
@@ -52,9 +53,15 @@ const FeaturesPageRoute = FeaturesPageRouteImport.update({
   path: '/features/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutPageRoute = AboutPageRouteImport.update({
+  id: '/about/',
+  path: '/about/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof PageRoute
+  '/about/': typeof AboutPageRoute
   '/features/': typeof FeaturesPageRoute
   '/learn/': typeof LearnPageRoute
   '/pricing/': typeof PricingPageRoute
@@ -64,6 +71,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof PageRoute
+  '/about': typeof AboutPageRoute
   '/features': typeof FeaturesPageRoute
   '/learn': typeof LearnPageRoute
   '/pricing': typeof PricingPageRoute
@@ -74,6 +82,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof PageRoute
+  '/about/': typeof AboutPageRoute
   '/features/': typeof FeaturesPageRoute
   '/learn/': typeof LearnPageRoute
   '/pricing/': typeof PricingPageRoute
@@ -85,6 +94,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about/'
     | '/features/'
     | '/learn/'
     | '/pricing/'
@@ -94,6 +104,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/features'
     | '/learn'
     | '/pricing'
@@ -103,6 +114,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about/'
     | '/features/'
     | '/learn/'
     | '/pricing/'
@@ -113,6 +125,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   PageRoute: typeof PageRoute
+  AboutPageRoute: typeof AboutPageRoute
   FeaturesPageRoute: typeof FeaturesPageRoute
   LearnPageRoute: typeof LearnPageRoute
   PricingPageRoute: typeof PricingPageRoute
@@ -172,11 +185,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FeaturesPageRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about/': {
+      id: '/about/'
+      path: '/about'
+      fullPath: '/about/'
+      preLoaderRoute: typeof AboutPageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   PageRoute: PageRoute,
+  AboutPageRoute: AboutPageRoute,
   FeaturesPageRoute: FeaturesPageRoute,
   LearnPageRoute: LearnPageRoute,
   PricingPageRoute: PricingPageRoute,

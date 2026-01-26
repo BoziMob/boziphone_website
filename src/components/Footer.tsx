@@ -4,6 +4,7 @@ const footerLinks = [
   { label: "Features", to: "/features" },
   { label: "Lær mer", to: "/learn" },
   { label: "Ressurser", to: "/resources" },
+  { label: "Om oss", to: "/about" },
   { label: "Support", to: "/support" },
 ];
 
