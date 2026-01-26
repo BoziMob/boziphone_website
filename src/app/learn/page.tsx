@@ -35,6 +35,15 @@ function LearnPage() {
       </div>
 
       <div className="flex flex-col gap-3">
+        <h2 className="text-lg font-semibold">Teknisk stack</h2>
+        <p className="text-base text-[color:var(--color-muted)]">
+          Vi bygger operativsystemet med Yocto Project og lager appene i Qt Quick
+          med C++. Det gir en lett, kontrollert plattform som er laget for
+          knappebasert bruk.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-3">
         <h2 className="text-lg font-semibold">Status</h2>
         <p className="text-base text-[color:var(--color-muted)]">
           Vi har allerede en fungerende prototype i emulering med en værapp som
