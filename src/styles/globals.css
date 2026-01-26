@@ -11,6 +11,14 @@
   --color-surface-muted: #f5f5f5;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
