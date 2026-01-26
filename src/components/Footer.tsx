@@ -11,27 +11,25 @@ function Footer() {
   return (
     <footer className="mt-10 flex flex-col gap-4 border-t border-[color:var(--color-border)] pt-6 text-sm text-[color:var(--color-muted)]">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
-          <div className="flex items-center gap-6">
-            <Link
-              to="/"
-              className="font-semibold text-[color:var(--color-ink)]"
-            >
-              BoziPhone
-            </Link>
-            <div className="flex flex-wrap items-center gap-4">
-              {footerLinks.map((link) => (
-                <Link key={link.label} className="font-medium" to={link.to}>
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+        <div className="flex flex-col gap-4 sm:gap-6">
+          <Link
+            to="/"
+            className="text-base font-semibold text-[color:var(--color-ink)]"
+          >
+            BoziPhone
+          </Link>
+          <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm sm:flex sm:flex-wrap sm:items-center sm:gap-4">
+            {footerLinks.map((link) => (
+              <Link key={link.label} className="font-medium" to={link.to}>
+                {link.label}
+              </Link>
+            ))}
           </div>
           <a className="font-medium" href="mailto:kontakt@bozi.no">
             kontakt@bozi.no
           </a>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <a
             className="font-medium"
             href="https://www.instagram.com/bozimobengineering/"
