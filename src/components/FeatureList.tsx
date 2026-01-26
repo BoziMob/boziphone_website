@@ -6,7 +6,8 @@ const features = [
   },
   {
     title: "Rimelig pris",
-    description: "Vi tilbyr en rimelig pris.",
+    description:
+      "Vi holder kostnadene nede ved å bygge smart og bruke lite ressurser, slik at prisen kan bli så lav som mulig.",
   },
   {
     title: "Tilpasset dagens samfunn",

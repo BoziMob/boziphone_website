@@ -10,9 +10,15 @@ function ResourcesPage() {
       <div className="flex flex-col gap-3">
         <h1 className="text-3xl font-semibold">Open source</h1>
         <p className="text-base text-[color:var(--color-muted)]">
-          BoziPhone er bygget på prinsippet om åpenhet. Vi tror at teknologi som
-          påvirker hverdagen bør være forståelig, åpen og mulig å forbedre av
-          fellesskapet.
+          BoziPhone er bygget på prinsippet om åpenhet. Vi vil at teknologi som
+          påvirker hverdagen skal kunne forstås, granskes og forbedres.
+        </p>
+      </div>
+
+      <div className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-surface-muted)] p-5">
+        <p className="text-base text-[color:var(--color-ink)]">
+          Open source betyr at kildekoden er tilgjengelig for alle. Du kan lese
+          den, forstå den og bidra til forbedringer.
         </p>
       </div>
 
@@ -24,21 +30,29 @@ function ResourcesPage() {
           som er tatt.
         </p>
         <p className="text-base text-[color:var(--color-muted)]">
-          Det betyr at flere kan bidra med forbedringer, feilrettinger og nye
-          ideer, slik at BoziPhone blir bedre over tid.
+          Det betyr også at flere kan bidra med forbedringer, feilrettinger og
+          nye ideer, slik at BoziPhone blir bedre over tid.
         </p>
       </div>
 
       <div className="flex flex-col gap-3">
-        <h2 className="text-lg font-semibold">Hva er åpent</h2>
+        <h2 className="text-lg font-semibold">Hva som er åpent</h2>
         <ul className="flex list-disc flex-col gap-2 pl-5 text-base text-[color:var(--color-muted)]">
           <li>Kildekode for brukergrensesnitt og apper.</li>
           <li>Dokumentasjon og veiledninger.</li>
           <li>Retningslinjer for personvern og sikkerhet.</li>
         </ul>
         <p className="text-base text-[color:var(--color-muted)]">
-          Koden er foreløping ikke tilgjengelig da vi fortsatt er veldig tidlig
-          i utviklingen.
+          Per nå er ikke koden tilgjengelig siden vi er tidlig i utviklingen,
+          men det kommer snart.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-3">
+        <h2 className="text-lg font-semibold">Hvordan vi bygger</h2>
+        <p className="text-base text-[color:var(--color-muted)]">
+          Plattformen er modulær og bevisst enkel. Appene kjører som egne
+          prosesser, og systemet er bygget for forutsigbarhet fremfor støy.
         </p>
       </div>
 
@@ -64,11 +78,8 @@ function ResourcesPage() {
       <div className="flex flex-col gap-3">
         <h2 className="text-lg font-semibold">Kontakt</h2>
         <p className="text-base text-[color:var(--color-muted)]">
-          Har du spørsmål om open source‑arbeidet vårt? Send oss en e-post på{" "}
-          <a className="font-medium" href="mailto:kontakt@bozi.no">
-            kontakt@bozi.no
-          </a>
-          .
+          Har du spørsmål om open source-arbeidet vårt? Send oss en e-post på
+          kontakt@bozi.no.
         </p>
         <p className="text-base text-[color:var(--color-muted)]">
           Vi svarer vanligvis innen 1–2 virkedager.
@@ -78,7 +89,7 @@ function ResourcesPage() {
       <div className="flex flex-col gap-3">
         <h2 className="text-lg font-semibold">Videre planer</h2>
         <p className="text-base text-[color:var(--color-muted)]">
-          Vi jobber med å publisere mer dokumentasjon, designressurser og et
+          Vi jobber med å publisere mer dokumentasjon, designressurser og en
           tydelig roadmap. Målet er at alle kan forstå hva som kommer, og være
           med på å forme det.
         </p>

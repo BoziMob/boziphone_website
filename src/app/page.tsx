@@ -25,7 +25,7 @@ function HomePage() {
       <Reveal delayMs={150}>
         <InfoSection
           title="Reduser stress i hverdagen"
-          body="BoziPhone er en telefon designet for å redusere skjermbruk, ved å kun ha tjenestene du faktisk trenger. Se hvordan BoziPhone kan hjelpe deg."
+          body="BoziPhone er laget for deg som vil være mer til stede uten å koble deg helt av. Du får det du trenger i hverdagen, men slipper det som stjeler tid og fokus."
           buttonLabel="Lær mer"
           buttonTo="/learn"
           imageClassName="border border-[color:var(--color-border)] bg-[color:var(--color-surface-muted)]"
@@ -34,8 +34,8 @@ function HomePage() {
       </Reveal>
       <Reveal delayMs={200}>
         <InfoSection
-          title="Open source teknologi"
-          body="Vi er for en mer åpen verden. Derfor er BoziPhone open source."
+          title="Open source, norsk og bevisst"
+          body="BoziPhone er et norsk prosjekt med åpen teknologi i bunn. Vi bygger en telefon som er enkel, moderne og rimelig, uten å gi slipp på viktige tjenester som BankID og kollektivtransport."
           buttonLabel="Om open source"
           buttonTo="/resources"
           imageClassName="border border-[color:var(--color-border)] bg-[color:var(--color-surface-muted)]"
