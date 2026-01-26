@@ -17,28 +17,45 @@ function ProductPage() {
       </div>
 
       <div className="flex flex-col gap-3">
-        <h2 className="text-lg font-semibold">Hva den er</h2>
+        <h2 className="text-lg font-semibold">Funksjonell minimalisme</h2>
         <p className="text-base text-[color:var(--color-muted)]">
-          En kompakt telefon med fysiske knapper, tydelig skjerm og et bevisst
-          operativsystem som holder fokus der det skal være. Målet er ikke
-          nostalgi, men funksjonell minimalisme tilpasset norsk hverdag.
+          Vi bygger en telefon som gir deg nødvendige tjenester uten at du drukner
+          i apper og varsler. Målet er å gi deg mer tilstedeværelse, mindre
+          skjermtid og et verktøy som fungerer når du trenger det.
         </p>
       </div>
 
       <div className="flex flex-col gap-3">
-        <h2 className="text-lg font-semibold">Hva den ikke er</h2>
+        <h2 className="text-lg font-semibold">Elegant og moderne</h2>
         <p className="text-base text-[color:var(--color-muted)]">
-          BoziPhone er ikke en smarttelefon med appbutikk og konstant distraksjon.
-          Den er laget for å redusere skjermbruk, ikke for å konkurrere om tiden
-          din.
+          BoziPhone skal føles som et bevisst valg, ikke et kompromiss. Den skal
+          være stilren, solid og laget for en målgruppe som vil ha enkelhet uten
+          å gi opp uttrykk og kvalitet.
         </p>
       </div>
 
       <div className="flex flex-col gap-3">
-        <h2 className="text-lg font-semibold">For hvem</h2>
+        <h2 className="text-lg font-semibold">Bygget for Norge</h2>
         <p className="text-base text-[color:var(--color-muted)]">
-          Primært for unge voksne som ønsker balanse, men også relevant for barn
-          og eldre som trenger en trygg og oversiktlig telefon.
+          Vi tar utgangspunkt i en norsk hverdag med BankID, Vipps og
+          kollektivtransport. Derfor planlegger vi støtte for tjenester som gjør
+          at du ikke faller utenfor, selv om du velger en enklere telefon.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-3">
+        <h2 className="text-lg font-semibold">Hvem den er for</h2>
+        <p className="text-base text-[color:var(--color-muted)]">
+          Primært unge voksne som ønsker balanse, men også relevant for barn og
+          eldre som trenger en trygg og oversiktlig telefon.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-3">
+        <h2 className="text-lg font-semibold">Status</h2>
+        <p className="text-base text-[color:var(--color-muted)]">
+          Vi er tidlig i utviklingen og bygger både programvare og maskinvare.
+          Målet er å lage et robust produkt som kan vare lenge.
         </p>
       </div>
     </section>

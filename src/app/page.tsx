@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImage from "../assets/BOZIAURA.png";
 import FeatureList from "../components/FeatureList";
 import Hero from "../components/Hero";
@@ -42,6 +42,61 @@ function HomePage() {
           imageSizeClassName="h-44 sm:h-64"
           reverse
         />
+      </Reveal>
+      <Reveal delayMs={230}>
+        <section className="flex flex-col gap-4">
+          <h2 className="text-lg font-semibold text-[color:var(--color-ink)]">
+            Hvorfor BoziPhone
+          </h2>
+          <p className="text-base text-[color:var(--color-muted)]">
+            Fordi vi vil ha en telefon som er nyttig uten å være
+            avhengighetsskapende. BoziPhone har det du <i>faktisk</i> trenger i
+            hverdagen, og ingenting mer. BoziPhone er moderne i uttrykket, enkel
+            i bruk og laget for norsk hverdag.
+          </p>
+          <Link className="text-base font-semibold" to="/features">
+            Se alle funksjoner
+          </Link>
+        </section>
+      </Reveal>
+      <Reveal delayMs={240}>
+        <section className="flex flex-col gap-4">
+          <h2 className="text-lg font-semibold text-[color:var(--color-ink)]">
+            Vanlige spørsmål
+          </h2>
+          <div className="flex flex-col gap-4 text-base text-[color:var(--color-muted)]">
+            <div className="flex flex-col gap-2">
+              <p className="font-semibold text-[color:var(--color-ink)]">
+                Hvem passer BoziPhone for?
+              </p>
+              <p>
+                Primært ungdom og unge voksne som ønsker å redusere skjermtid og
+                øke tilstedeværelse, men den er også praktisk for barn og eldre
+                som vil ha en enkel og trygg telefon.
+              </p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <p className="font-semibold text-[color:var(--color-ink)]">
+                Kommer BankID og Vipps?
+              </p>
+              <p>
+                Vi ønsker og har planer om å implementere BankID og Vipps i
+                fremtiden, men ettersom BoziPhone ikke bruker et standard
+                operativsystem som iOS eller Android vil dette være svært
+                vanskelig og en stund inn i fremtiden.
+              </p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <p className="font-semibold text-[color:var(--color-ink)]">
+                Når lanseres telefonen?
+              </p>
+              <p>
+                Vi er tidlig i utviklingen og deler mer informasjon etter hvert
+                som vi kommer nærmere produksjon.
+              </p>
+            </div>
+          </div>
+        </section>
       </Reveal>
       <Reveal delayMs={250}>
         <FeatureList />
