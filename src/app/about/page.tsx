@@ -21,7 +21,7 @@ function AboutPage() {
           dataingeniør ved NTNU i Trondheim.
         </p>
         <p>
-          <i>Sindre Mjøs studerer</i> jobber med software og dataingeniør ved
+          <i>Sindre Mjøs</i> jobber med software og studerer dataingeniør ved
           NTNU i Trondheim.
         </p>
       </div>
