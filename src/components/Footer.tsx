@@ -1,11 +1,12 @@
 import { Link } from "@tanstack/react-router";
 
 const footerLinks = [
-  { label: "Features", to: "/features" },
-  { label: "Lær mer", to: "/learn" },
-  { label: "Ressurser", to: "/resources" },
+  { label: "Produkt", to: "/product" },
+  { label: "Funksjoner", to: "/features" },
+  { label: "Priser", to: "/pricing" },
   { label: "Om oss", to: "/about" },
-  { label: "Support", to: "/support" },
+  { label: "FAQ/Kontakt", to: "/support" },
+  { label: "Personvern", to: "/privacy" },
 ];
 
 function Footer() {

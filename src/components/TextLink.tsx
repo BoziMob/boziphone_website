@@ -7,7 +7,7 @@ type TextLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 function TextLink({ to, className = "", children, ...props }: TextLinkProps) {
-  const classes = `text-base font-semibold text-blue-600 transition hover:text-blue-500 ${className}`;
+  const classes = `text-base font-semibold text-[color:var(--color-link)] underline decoration-[color:var(--color-border)] underline-offset-4 transition-colors hover:text-[color:var(--color-link-hover)] ${className}`;
 
   if (to) {
     return (

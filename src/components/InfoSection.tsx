@@ -8,6 +8,7 @@ type InfoSectionProps = {
   imageClassName: string;
   imageSizeClassName?: string;
   reverse?: boolean;
+  surface?: "plain" | "glass";
 };
 
 function InfoSection({
@@ -18,6 +19,7 @@ function InfoSection({
   imageClassName,
   imageSizeClassName = "h-40 sm:h-56",
   reverse = false,
+  surface = "plain",
 }: InfoSectionProps) {
   return (
     <section
@@ -41,7 +43,9 @@ function InfoSection({
         </div>
       </div>
       <div
-        className={`w-full rounded-2xl ${imageSizeClassName} ${imageClassName} ${
+        className={`w-full rounded-2xl ${
+          surface === "glass" ? "glass-panel tech-surface lift-on-hover" : ""
+        } ${imageSizeClassName} ${imageClassName} ${
           reverse ? "order-1 sm:col-start-1" : "order-2"
         }`}
       />

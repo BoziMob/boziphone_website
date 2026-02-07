@@ -9,21 +9,18 @@
     <loc>https://bozi.no/product</loc>
   </url>
   <url>
-    <loc>https://bozi.no/learn</loc>
-  </url>
-  <url>
     <loc>https://bozi.no/pricing</loc>
   </url>
   <url>
     <loc>https://bozi.no/features</loc>
   </url>
   <url>
-    <loc>https://bozi.no/resources</loc>
-  </url>
-  <url>
     <loc>https://bozi.no/about</loc>
   </url>
   <url>
     <loc>https://bozi.no/support</loc>
+  </url>
+  <url>
+    <loc>https://bozi.no/privacy</loc>
   </url>
 </urlset>
