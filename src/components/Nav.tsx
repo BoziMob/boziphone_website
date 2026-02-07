@@ -2,8 +2,10 @@ import { Link } from "@tanstack/react-router";
 
 const navItems = [
   { label: "Produkt", to: "/product" },
-  { label: "Lær mer", to: "/learn" },
+  { label: "Funksjoner", to: "/features" },
   { label: "Priser", to: "/pricing" },
+  { label: "Om oss", to: "/about" },
+  { label: "FAQ/Kontakt", to: "/support" },
 ];
 
 function Nav() {
@@ -19,7 +21,8 @@ function Nav() {
         {navItems.map((item) => (
           <Link
             key={item.label}
-            className="text-sm font-medium text-[color:var(--color-ink-soft)]"
+            activeProps={{ "data-status": "active" }}
+            className="nav-link text-sm font-medium text-[color:var(--color-ink-soft)] transition-colors hover:text-[color:var(--color-ink)] focus-visible:outline-none focus-visible:text-[color:var(--color-ink)]"
             to={item.to}
           >
             {item.label}

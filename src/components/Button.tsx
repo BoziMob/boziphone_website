@@ -3,9 +3,9 @@ import { Link } from "@tanstack/react-router";
 
 const variants = {
   primary:
-    "bg-[color:var(--color-ink)] text-[color:var(--color-surface)] hover:bg-[color:var(--color-ink-hover)]",
+    "bg-[color:var(--color-ink)] text-[color:var(--color-surface)] hover:bg-[color:var(--color-ink-hover)] hover:brightness-[1.03]",
   secondary:
-    "border border-[color:var(--color-border)] bg-[color:var(--color-surface)] text-[color:var(--color-ink)] hover:bg-[color:var(--color-surface-muted)]",
+    "border border-[color:var(--color-border)] bg-[color:var(--color-surface)] text-[color:var(--color-ink)] hover:bg-[color:var(--color-surface-muted)] hover:brightness-[1.01]",
 } as const;
 
 type ButtonVariant = keyof typeof variants;
@@ -22,7 +22,7 @@ function Button({
   children,
   ...props
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-md px-5 py-2.5 text-sm font-semibold transition ${variants[variant]} ${className}`;
+  const classes = `lift-on-hover inline-flex items-center justify-center rounded-md px-5 py-2.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-ink)]/30 ${variants[variant]} ${className}`;
 
   if (to) {
     return (

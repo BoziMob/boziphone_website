@@ -13,6 +13,7 @@ import { Route as PageRouteImport } from './app/page'
 import { Route as SupportPageRouteImport } from './app/support/page'
 import { Route as ResourcesPageRouteImport } from './app/resources/page'
 import { Route as ProductPageRouteImport } from './app/product/page'
+import { Route as PrivacyPageRouteImport } from './app/privacy/page'
 import { Route as PricingPageRouteImport } from './app/pricing/page'
 import { Route as LearnPageRouteImport } from './app/learn/page'
 import { Route as FeaturesPageRouteImport } from './app/features/page'
@@ -36,6 +37,11 @@ const ResourcesPageRoute = ResourcesPageRouteImport.update({
 const ProductPageRoute = ProductPageRouteImport.update({
   id: '/product/',
   path: '/product/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPageRoute = PrivacyPageRouteImport.update({
+  id: '/privacy/',
+  path: '/privacy/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PricingPageRoute = PricingPageRouteImport.update({
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/features/': typeof FeaturesPageRoute
   '/learn/': typeof LearnPageRoute
   '/pricing/': typeof PricingPageRoute
+  '/privacy/': typeof PrivacyPageRoute
   '/product/': typeof ProductPageRoute
   '/resources/': typeof ResourcesPageRoute
   '/support/': typeof SupportPageRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/features': typeof FeaturesPageRoute
   '/learn': typeof LearnPageRoute
   '/pricing': typeof PricingPageRoute
+  '/privacy': typeof PrivacyPageRoute
   '/product': typeof ProductPageRoute
   '/resources': typeof ResourcesPageRoute
   '/support': typeof SupportPageRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/features/': typeof FeaturesPageRoute
   '/learn/': typeof LearnPageRoute
   '/pricing/': typeof PricingPageRoute
+  '/privacy/': typeof PrivacyPageRoute
   '/product/': typeof ProductPageRoute
   '/resources/': typeof ResourcesPageRoute
   '/support/': typeof SupportPageRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/features/'
     | '/learn/'
     | '/pricing/'
+    | '/privacy/'
     | '/product/'
     | '/resources/'
     | '/support/'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/features'
     | '/learn'
     | '/pricing'
+    | '/privacy'
     | '/product'
     | '/resources'
     | '/support'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/features/'
     | '/learn/'
     | '/pricing/'
+    | '/privacy/'
     | '/product/'
     | '/resources/'
     | '/support/'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   FeaturesPageRoute: typeof FeaturesPageRoute
   LearnPageRoute: typeof LearnPageRoute
   PricingPageRoute: typeof PricingPageRoute
+  PrivacyPageRoute: typeof PrivacyPageRoute
   ProductPageRoute: typeof ProductPageRoute
   ResourcesPageRoute: typeof ResourcesPageRoute
   SupportPageRoute: typeof SupportPageRoute
@@ -162,6 +175,13 @@ declare module '@tanstack/react-router' {
       path: '/product'
       fullPath: '/product/'
       preLoaderRoute: typeof ProductPageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy/': {
+      id: '/privacy/'
+      path: '/privacy'
+      fullPath: '/privacy/'
+      preLoaderRoute: typeof PrivacyPageRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing/': {
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   FeaturesPageRoute: FeaturesPageRoute,
   LearnPageRoute: LearnPageRoute,
   PricingPageRoute: PricingPageRoute,
+  PrivacyPageRoute: PrivacyPageRoute,
   ProductPageRoute: ProductPageRoute,
   ResourcesPageRoute: ResourcesPageRoute,
   SupportPageRoute: SupportPageRoute,
