@@ -19,8 +19,8 @@ function ResourcesPage() {
       </Reveal>
 
       <Reveal delayMs={100}>
-        <div className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-surface-muted)] p-5">
-          <p className="text-base text-[color:var(--color-ink)]">
+        <div className="border-l-2 border-[color:var(--color-border)] py-1 pl-5">
+          <p className="text-base leading-relaxed text-[color:var(--color-ink)]">
             Open source betyr at kildekoden er tilgjengelig for alle. Du kan lese
             den, forstå den og bidra til forbedringer.
           </p>
