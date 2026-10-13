@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Reveal from "../../components/Reveal";
 
 export const Route = createFileRoute("/about/")({
   component: AboutPage,
@@ -7,24 +8,30 @@ export const Route = createFileRoute("/about/")({
 function AboutPage() {
   return (
     <section className="mx-auto flex w-full max-w-3xl flex-col gap-6">
-      <h1 className="text-3xl font-semibold">Om oss</h1>
-      <p className="text-base text-[color:var(--color-muted)]">
-        Vi er et lite, norsk team som bygger BoziPhone.
-      </p>
-      <div className="flex flex-col gap-3 text-base text-[color:var(--color-muted)]">
-        <p>
-          <i>Marius Claudey</i> jobber med hardware og studerer elektroingeniør
-          ved Høgskulen på Vestlandet.
+      <Reveal>
+        <h1 className="text-3xl font-semibold">Om oss</h1>
+      </Reveal>
+      <Reveal delayMs={100}>
+        <p className="text-base text-[color:var(--color-muted)]">
+          Vi er et lite, norsk team som bygger BoziPhone.
         </p>
-        <p>
-          <i>Johannes Aamot-Skeidsvoll</i> jobber med software og studerer
-          dataingeniør ved NTNU i Trondheim.
-        </p>
-        <p>
-          <i>Sindre Mjøs</i> jobber med software og studerer dataingeniør ved
-          NTNU i Trondheim.
-        </p>
-      </div>
+      </Reveal>
+      <Reveal delayMs={150}>
+        <div className="flex flex-col gap-3 text-base text-[color:var(--color-muted)]">
+          <p>
+            <i>Marius Claudey</i> jobber med hardware og studerer elektroingeniør
+            ved Høgskulen på Vestlandet.
+          </p>
+          <p>
+            <i>Johannes Aamot-Skeidsvoll</i> jobber med software og studerer
+            dataingeniør ved NTNU i Trondheim.
+          </p>
+          <p>
+            <i>Sindre Mjøs</i> jobber med software og studerer dataingeniør ved
+            NTNU i Trondheim.
+          </p>
+        </div>
+      </Reveal>
     </section>
   );
 }
