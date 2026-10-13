@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Reveal from "../../components/Reveal";
+import TextLink from "../../components/TextLink";
 
 export const Route = createFileRoute("/learn/")({
   component: LearnPage,
@@ -9,90 +10,58 @@ function LearnPage() {
   return (
     <section className="mx-auto flex w-full max-w-3xl flex-col gap-8">
       <Reveal>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4">
           <h1 className="text-3xl font-semibold">Lær mer</h1>
-          <p className="text-base text-[color:var(--color-muted)]">
-            Ideen til BoziPhone kom våren 2025. Vi ønsket en telefon som er enkel
-            og elegant, uten at den blir et kompromiss. Vi ville lage et tydelig
-            alternativ til skjermtid, overvåking og plattformer som eier brukerne
-            sine.
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            Ideen til BoziPhone kom våren 2025. Vi ønsket oss en telefon som
+            kunne gjøre de praktiske tingene vi trenger, uten at resten av dagen
+            forsvant inn i den. Det ble utgangspunktet for å bygge vår egen.
           </p>
         </div>
       </Reveal>
 
       <Reveal delayMs={100}>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-lg font-semibold">Hvorfor nå</h2>
-          <p className="text-base text-[color:var(--color-muted)]">
-            Flere ønsker ro, fokus og en mer stabil digital hverdag. Samtidig er
-            mange lei av at de store teknologiselskapene samler inn data og styrer
-            oppmerksomheten vår. BoziPhone er et bevisst motstykke, bygget for
-            mennesker som vil ha kontrollen tilbake.
+        <div className="flex flex-col gap-4">
+          <h2 className="text-lg font-semibold">Hvorfor en egen telefon?</h2>
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            En enkel mobil er til liten hjelp hvis du må ta med en smarttelefon
+            likevel. Derfor tar vi utgangspunkt i en norsk hverdag, der
+            transport, betaling og innlogging skjer på mobilen. Vi planlegger
+            apper for kollektivtransport og ønsker støtte for BankID og Vipps på
+            sikt. De to siste blir mest sansynlig ikke med i første versjon.
           </p>
-          <p className="text-base text-[color:var(--color-muted)]">
-            Vi ser at interessen for enklere telefoner vokser. Problemet er at
-            dagens alternativer enten er for begrensede eller for åpne og
-            distraherende. BoziPhone fyller hullet mellom disse ytterpunktene med
-            en bevisst begrenset telefon som fortsatt fungerer i en norsk hverdag.
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            Vi vil unngå å bygge enda en telefon som konkurrerer om
+            oppmerksomheten din. Vi velger bort sosiale medier og en vanlig
+            appbutikk, og bygger et enklere operativsystem til de oppgavene
+            telefonen skal løse.
           </p>
         </div>
       </Reveal>
 
       <Reveal delayMs={150}>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-lg font-semibold">Det viktigste er på plass</h2>
-          <p className="text-base text-[color:var(--color-muted)]">
-            Betaling, ID og transport er ikke valgfritt i Norge. Derfor planlegger
-            vi støtte for Vipps, BankID og kollektivtransport som Skyss, Ruter og
-            AtB, i tillegg til telefon og meldinger.
+        <div className="flex flex-col gap-4">
+          <h2 className="text-lg font-semibold">
+            En telefon du kan eie og forstå
+          </h2>
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            Vi vil at du skal kunne undersøke hvordan telefonen fungerer, og
+            gjøre egne endringer hvis du ønsker det. Derfor skal
+            operativsystemet og maskinvaredesignet være åpne. Du finner mer om
+            teknologien og planene for publisering på siden om åpen kildekode.
           </p>
-          <p className="text-base text-[color:var(--color-muted)]">
-            BoziPhone skal være bevisst begrenset, men ikke teknologifientlig. Den
-            skal være funksjonell, men ikke engasjementsdrevet. Den skal være åpen
-            for modifikasjon, men ikke en appplattform.
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            Sikkerhet er noe vi prioriterer mens vi utvikler telefonen. Vi vil
+            gjøre den så sikker vi kan, og arbeider samtidig for et system som
+            er enkelt å vedlikeholde.
           </p>
-        </div>
-      </Reveal>
-
-      <Reveal delayMs={200}>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-lg font-semibold">Simpelt, trygt og pålitelig</h2>
-          <p className="text-base text-[color:var(--color-muted)]">
-            Vi bygger en opplevelse som skal være stabil og forutsigbar. Én app om
-            gangen, ingen påtrengende varsler, ingen støy. Resultatet skal føles
-            moderne, men rolig.
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            Vi planlegger ikke abonnement eller ekstra betaling for å bruke
+            selve telefonen.
           </p>
-          <p className="text-base text-[color:var(--color-muted)]">
-            Vi kommer aldri til å ha abonnement eller skjulte låsninger. Du skal
-            eie telefonen din, og den skal fungere uten ekstra påslag.
-          </p>
-        </div>
-      </Reveal>
-
-      <Reveal delayMs={230}>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-lg font-semibold">Teknisk stack</h2>
-          <p className="text-base text-[color:var(--color-muted)]">
-            Operativsystemet bygges med Yocto Project og blir etter hvert kjent
-            som BoziOS. Appene lages i Qt Quick med C++, og hele plattformen er
-            modulær slik at vi kan holde den lett, sikker og effektiv.
-          </p>
-          <p className="text-base text-[color:var(--color-muted)]">
-            Vi bruker en bevisst enkel arkitektur og bygger alt med fokus på
-            driftssikkerhet. Det gjør telefonen mer stabil, og gir bedre kontroll
-            over hva som faktisk kjører på enheten.
-          </p>
-        </div>
-      </Reveal>
-
-      <Reveal delayMs={240}>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-lg font-semibold">Status</h2>
-          <p className="text-base text-[color:var(--color-muted)]">
-            Vi har allerede en fungerende prototype i emulering med en værapp som
-            referanse. Neste steg er maskinvaretesting og videre bygging av
-            kjernefunksjoner.
-          </p>
+          <div className="flex flex-col items-start gap-2">
+            <TextLink to="/resources">Les om åpen kildekode</TextLink>
+          </div>
         </div>
       </Reveal>
     </section>

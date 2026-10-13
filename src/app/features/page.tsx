@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Reveal from "../../components/Reveal";
+import TextLink from "../../components/TextLink";
 
 export const Route = createFileRoute("/features/")({
   component: FeaturesPage,
@@ -9,71 +10,72 @@ function FeaturesPage() {
   return (
     <section className="mx-auto flex w-full max-w-3xl flex-col gap-8">
       <Reveal>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4">
           <h1 className="text-3xl font-semibold">Funksjoner</h1>
-          <p className="text-base text-[color:var(--color-muted)]">
-            BoziPhone er laget for funksjonell minimalisme. Du får det viktigste,
-            uten støy og distraksjoner.
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            Vi velger funksjoner ut fra hva som er nyttig å ha i lommen. Du skal
+            kunne holde kontakten, finne frem og høre på musikk uten at
+            telefonen stadig pirrer deg. Funksjonene nedenfor er planlagt, men
+            merk vi fortsatt er tidlig i utviklingen.
           </p>
         </div>
       </Reveal>
 
       <Reveal delayMs={100}>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-lg font-semibold">Knappebasert kontroll</h2>
-          <p className="text-base text-[color:var(--color-muted)]">
-            Telefonen styres fullt og helt med fysiske knapper. Numerisk tastatur,
-            navigasjonsknapp og funksjonstaster gjør at den kan brukes med én hånd,
-            og at den er enkel å lære for alle aldersgrupper.
+        <div className="flex flex-col gap-4">
+          <h2 className="text-lg font-semibold">Knapper og kontakt</h2>
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            Telefonen skal styres med et numerisk tastatur, en navigasjonsknapp
+            og funksjonstaster. Vi vil gjøre det enkelt å finne frem med én
+            hånd, med tydelige valg og uten å måtte sveipe gjennom mange menyer.
+          </p>
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            Anrop, SMS og kontakter er kjernen. Vi planlegger anropslogg og
+            hurtigvalg, meldinger samlet i samtaler og mulighet til å importere
+            og eksportere kontaktene dine.
           </p>
         </div>
       </Reveal>
 
       <Reveal delayMs={150}>
         <div className="flex flex-col gap-4">
-          <h2 className="text-lg font-semibold">Grunnleggende funksjoner</h2>
-          <ul className="flex list-disc flex-col gap-2 pl-5 text-base text-[color:var(--color-muted)]">
-            <li>Taleanrop med anropslogg og hurtigvalg.</li>
-            <li>SMS med trådvisning og enkel håndtering.</li>
-            <li>Kontakter med import og eksport.</li>
-            <li>Alarm, klokke og enkle notater.</li>
-            <li>Enkel navigasjon og posisjon.</li>
-            <li>Musikkavspilling med lokale filer.</li>
-          </ul>
+          <h2 className="text-lg font-semibold">Det praktiske i hverdagen</h2>
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            Vi planlegger alarm, klokke, notater og navigasjon med posisjon. Du
+            skal også kunne spille av musikk fra lokale filer. For
+            kollektivtransport ønsker vi egne apper, slik at du kan reise uten å
+            være avhengig av en smarttelefon.
+          </p>
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            BankID og Vipps kommer ikke i første versjon. Vi ønsker å støtte dem
+            senere, men vet ikke enda når det blir mulig.
+          </p>
         </div>
       </Reveal>
 
       <Reveal delayMs={200}>
         <div className="flex flex-col gap-4">
-          <h2 className="text-lg font-semibold">Viktige tjenester</h2>
-          <p className="text-base text-[color:var(--color-muted)]">
-            Vi planlegger egne apper for kollektivtransport og andre tjenester som
-            gjør hverdagen mulig uten smarttelefon. Vipps og BankID er viktige, men
-            er ikke med i første versjon. Vi bygger plattformen slik at de kan
-            legges til når det blir mulig.
+          <h2 className="text-lg font-semibold">
+            Færre ting som krever oppmerksomhet
+          </h2>
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            BoziPhone skal ikke ha en vanlig appbutikk eller
+            tredjepartsinstallasjoner som standard. Vi velger et begrenset sett
+            med apper for vanlig bruk. For deg som vil bygge og installere din
+            egen versjon av operativsystemet, planlegger vi en egen
+            byggeveiledning.
           </p>
-        </div>
-      </Reveal>
-
-      <Reveal delayMs={230}>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-lg font-semibold">Ingen app-butikk</h2>
-          <p className="text-base text-[color:var(--color-muted)]">
-            BoziPhone har ingen app-butikk og ingen tredjepartsinstallasjoner som
-            standard. Systemet er lukket for distraksjoner, men åpent for det som
-            er nødvendig.
+          <p className="text-base leading-relaxed text-[color:var(--color-muted)]">
+            Vi jobber også for lavt strømforbruk: skjermen skal dimmes når den
+            ikke brukes, og radiosignaler skal kunne slås av. Batterilevetiden
+            må vi måle på maskinvaren før vi kan si hvor lenge telefonen holder
+            mellom ladingene.
           </p>
-        </div>
-      </Reveal>
-
-      <Reveal delayMs={240}>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-lg font-semibold">Lang batterilevetid</h2>
-          <p className="text-base text-[color:var(--color-muted)]">
-            BoziPhone er designet for å bruke lite strøm. Skjermen dimmes når den
-            ikke er i bruk, radiosignaler kan slås av, og systemet prioriterer
-            stabilitet fremfor bakgrunnsaktivitet.
-          </p>
+          <div className="flex flex-col items-start gap-2">
+            <TextLink to="/resources">
+              Les om operativsystemet og maskinvaren
+            </TextLink>
+          </div>
         </div>
       </Reveal>
     </section>
