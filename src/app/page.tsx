@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImage from "../assets/BOZIAURA.png";
+import coffeeImage from "../assets/coffee.jpg";
+import hardwareImage from "../assets/hardware-overview.png";
+import heroImage from "../assets/hos_sindre.jpg";
 import FeatureList from "../components/FeatureList";
 import Hero from "../components/Hero";
 import InfoSection from "../components/InfoSection";
@@ -29,6 +31,8 @@ function HomePage() {
           body="BoziPhone er laget for deg som vil være mer til stede uten å koble deg helt av. Du får det du trenger i hverdagen, men slipper det som stjeler tid og fokus."
           buttonLabel="Lær mer"
           buttonTo="/learn"
+          imageSrc={coffeeImage}
+          imageAlt="Kopper på et kafébord i sollys"
           imageClassName="border border-[color:var(--color-border)] bg-[color:var(--color-surface-muted)]"
           imageSizeClassName="h-44 sm:h-64"
         />
@@ -39,8 +43,10 @@ function HomePage() {
           body="BoziPhone er et norsk prosjekt med åpen teknologi i bunn. Vi bygger en telefon som er enkel, moderne og rimelig, uten å gi slipp på viktige tjenester som BankID og kollektivtransport."
           buttonLabel="Om open source"
           buttonTo="/resources"
+          imageSrc={hardwareImage}
+          imageAlt="Pinneoversikt og koblingsskjema fra utviklingen av BoziPhone-maskinvaren"
           imageClassName="border border-[color:var(--color-border)] bg-[color:var(--color-surface-muted)]"
-          imageSizeClassName="h-44 sm:h-64"
+          imageSizeClassName="aspect-[2/1]"
           reverse
         />
       </Reveal>
