@@ -9,20 +9,18 @@ function Hero() {
       <p className="text-lg text-[color:var(--color-muted)] sm:text-xl">
         En dumtelefon for den norske hverdagen
       </p>
+      <p className="max-w-xl text-base leading-relaxed text-[color:var(--color-muted)]">
+        Vi bygger en knappestyrt mobil for samtaler, meldinger og det praktiske i
+        hverdagen, uten sosiale medier. Telefonen er fortsatt under utvikling.
+      </p>
       <div className="flex w-full flex-col items-center gap-2 sm:w-auto sm:flex-row">
-        <Button className="w-full sm:w-auto" to="/learn">
-          Lær mer
+        <Button className="w-full sm:w-auto" to="/product">
+          Om telefonen
         </Button>
         <Button className="w-full sm:w-auto" variant="secondary" to="/pricing">
           Se priser
         </Button>
       </div>
-      <a
-        href="#utforsk"
-        className="mt-2 text-base text-[color:var(--color-muted)] hover:text-[color:var(--color-ink)] focus-visible:outline-2 focus-visible:outline-offset-4"
-      >
-        Utforsk telefonen <span aria-hidden="true">↓</span>
-      </a>
     </section>
   );
 }

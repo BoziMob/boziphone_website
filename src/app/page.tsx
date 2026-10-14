@@ -19,29 +19,21 @@ function HomePage() {
         <Hero />
       </Reveal>
       <Reveal delayMs={100}>
-        <img
-          src={heroImage}
-          alt="BoziPhone"
-          className="h-48 w-full rounded-2xl border border-[color:var(--color-border)] object-cover sm:h-64"
-        />
-      </Reveal>
-      <Reveal delayMs={150}>
         <InfoSection
-          id="utforsk"
-          title="Reduser stress i hverdagen"
-          body="BoziPhone er laget for deg som vil være mer til stede uten å koble deg helt av. Du får det du trenger i hverdagen, men slipper det som stjeler tid og fokus."
-          buttonLabel="Lær mer"
-          buttonTo="/learn"
+          title="Færre ting som tar oppmerksomheten"
+          body="Med fysiske knapper skal du kunne ringe, sende SMS og høre på musikk. Vi planlegger også egne apper for kollektivtransport, samt Vipps og BankID. Sosiale medier og vanlig appbutikk er ikke tilgjengelig."
+          buttonLabel="Se planlagte funksjoner"
+          buttonTo="/features"
           imageSrc={coffeeImage}
           imageAlt="Kopper på et kafébord i sollys"
           imageClassName="border border-[color:var(--color-border)] bg-[color:var(--color-surface-muted)]"
           imageSizeClassName="h-44 sm:h-64"
         />
       </Reveal>
-      <Reveal delayMs={200}>
+      <Reveal delayMs={150}>
         <InfoSection
-          title="Open source, norsk og bevisst"
-          body="BoziPhone er et norsk prosjekt med åpen teknologi i bunn. Vi bygger en telefon som er enkel, moderne og rimelig, uten å gi slipp på viktige tjenester som BankID og kollektivtransport."
+          title="Åpent operativsystem og maskinvare"
+          body="Vi skal publisere operativsystemet under GPLv3 med byggeveiledning, og åpne maskinvaredesignet. Da skal du kunne undersøke hvordan telefonen fungerer, endre programvaren og bygge videre selv. Materialet er ikke publisert ennå, og vi har ikke bestemt om appene også skal være åpen kildekode."
           buttonLabel="Om open source"
           buttonTo="/resources"
           imageSrc={hardwareImage}
@@ -49,6 +41,13 @@ function HomePage() {
           imageClassName="border border-[color:var(--color-border)] bg-[color:var(--color-surface-muted)]"
           imageSizeClassName="aspect-[2/1]"
           reverse
+        />
+      </Reveal>
+      <Reveal delayMs={200}>
+        <img
+          src={heroImage}
+          alt="BoziPhone"
+          className="h-48 w-full rounded-2xl border border-[color:var(--color-border)] object-cover sm:h-64"
         />
       </Reveal>
       <Reveal delayMs={230}>
