@@ -17,6 +17,12 @@ function Hero() {
           Se priser
         </Button>
       </div>
+      <a
+        href="#utforsk"
+        className="mt-2 text-base text-[color:var(--color-muted)] hover:text-[color:var(--color-ink)] focus-visible:outline-2 focus-visible:outline-offset-4"
+      >
+        Utforsk telefonen <span aria-hidden="true">↓</span>
+      </a>
     </section>
   );
 }

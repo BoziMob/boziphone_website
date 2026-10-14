@@ -27,6 +27,7 @@ function HomePage() {
       </Reveal>
       <Reveal delayMs={150}>
         <InfoSection
+          id="utforsk"
           title="Reduser stress i hverdagen"
           body="BoziPhone er laget for deg som vil være mer til stede uten å koble deg helt av. Du får det du trenger i hverdagen, men slipper det som stjeler tid og fokus."
           buttonLabel="Lær mer"

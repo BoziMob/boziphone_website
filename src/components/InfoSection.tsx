@@ -1,6 +1,7 @@
 import Button from "./Button";
 
 type InfoSectionProps = {
+  id?: string;
   title: string;
   headingLevel?: 1 | 2;
   body: string;
@@ -14,6 +15,7 @@ type InfoSectionProps = {
 };
 
 function InfoSection({
+  id,
   title,
   headingLevel = 2,
   body,
@@ -32,7 +34,8 @@ function InfoSection({
 
   return (
     <section
-      className={`grid items-center gap-6 sm:grid-cols-2 ${
+      id={id}
+      className={`grid scroll-mt-32 items-center gap-6 sm:grid-cols-2 ${
         reverse ? "sm:grid-flow-col-dense" : ""
       }`}
     >
