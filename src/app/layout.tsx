@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { ReactNode } from "react";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
@@ -22,6 +23,7 @@ function RootLayout({ children }: RootLayoutProps) {
           <Footer />
         </div>
       </div>
+      <Analytics />
     </div>
   );
 }
